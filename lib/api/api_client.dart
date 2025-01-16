@@ -45,7 +45,7 @@ class ApiClient {
 // ----------------------------------   服务端地址测试   ----------------------------------
   Future<bool> testAddress() async {
     // ignore: invalid_return_type_for_catch_error
-    var appResponse = await get('').catchError((e) {
+    var appResponse = await get('/test').catchError((e) {
       printInfo(info: I18n.network_connect_timeout.tr);
       return e;
     }, test: (error) {
